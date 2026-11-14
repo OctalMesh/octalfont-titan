@@ -1,0 +1,2 @@
+# Shared build tooling, pinned to a release tag (see OctalMesh/OctalFont releases).
+octalfont[build] @ git+https://github.com/OctalMesh/OctalFont@v0.1.0

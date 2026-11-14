@@ -1,0 +1,31 @@
+# Composite glyph recipe. Precomposed letters are derived automatically from
+# Unicode decompositions; tune placement here. All values in font units.
+gap: 40          # base -> first mark
+stack_gap: 20    # mark -> next stacked mark
+
+# Per-mark defaults (by glyph name). `side` is auto-detected from Unicode.
+marks:
+  cedillacomb:     {gap: 0}
+  ogonekcomb:      {gap: 0, anchor_x: right}
+  commaaccentcomb: {gap: 0}
+
+# Per resulting glyph, per mark: nudge dx/dy or replace the gap.
+# overrides:
+#   Aacute: {acutecomb: {dx: 10}}
+#   Ccedilla: {cedillacomb: {gap: -20}}
+overrides: {}
+
+# Explicit base anchors for glyphs whose bbox centre is wrong.
+# anchors:
+#   J: {top: [310, 700]}
+anchors: {}
+
+# Glyphs never auto-built (draw them as SVG instead).
+# Lcaron/dcaron/lcaron/tcaron need the *.alt caron beside the stem, not above it.
+# Draw them or define a recipe under `glyphs:` once lowercase exists.
+exclude: [Lcaron, dcaron, lcaron, tcaron]
+
+# Manual recipes for glyphs with no Unicode decomposition.
+# glyphs:
+#   dcaron: {base: d, marks: [caroncomb]}
+glyphs: {}

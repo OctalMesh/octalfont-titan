@@ -1,0 +1,42 @@
+# Single source of truth for Octal Titan. Everything else in sources/ is generated:
+#   octalfont sources   ->  ufo/, OctalTitan.designspace, config.yaml
+family: Octal Titan
+version: "0.000"
+copyright_year: 2025
+repository: https://github.com/OctalMesh/octalfont-titan
+vendor_id: OCTM
+designer: Nykon Hrytsyshyn
+designer_url: https://nykon.me
+manufacturer: OctalMesh
+manufacturer_url: https://octalmesh.com
+description: Monospaced geometric display typeface built from straight strokes and sharp corners.
+
+masters:
+  - {style: Regular, weight: 400, svg: svg}
+
+glyphsets:
+  required: [GF_Latin_Core]
+  optional: [GF_Cyrillic_Plus]   # add GF_Latin_Vietnamese to build Vietnamese composites
+scripts: [Latn, Cyrl]
+
+# SVG artboard is 1000 units; y=0 is cap height, y=1000 is the baseline.
+svg: {artboard: 1000}
+
+spacing:
+  mode: monospace
+  advance: 850          # 700 glyph body + 75 + 75 side bearings
+  zero_width_marks: true
+
+# Ascender must clear the tallest glyph (Aacute = 1037); `octalfont check` verifies it.
+# Metrics cannot change after release, so settle them (and Vietnamese) before 1.000.
+metrics:
+  upm: 1000
+  cap_height: 700
+  x_height: 500
+  ascender: 1050
+  descender: -300
+
+# Extra gftools-builder options, merged over the generated defaults.
+build:
+  buildOTF: false
+  buildWebfont: false
