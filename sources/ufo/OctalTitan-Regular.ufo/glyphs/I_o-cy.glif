@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Io-cy" format="2">
+  <advance width="850"/>
+  <unicode hex="0401"/>
+  <anchor x="425" y="740" name="top"/>
+  <anchor x="425" y="-180" name="bottom"/>
+  <outline>
+    <contour>
+      <point x="775.0" y="420.0" type="line"/>
+      <point x="775.0" y="560.0" type="line"/>
+      <point x="626.467" y="560.0" type="line"/>
+      <point x="626.467" y="700.0" type="line"/>
+      <point x="486.467" y="700.0" type="line"/>
+      <point x="486.467" y="560.0" type="line"/>
+      <point x="363.967" y="560.0" type="line"/>
+      <point x="363.967" y="700.0" type="line"/>
+      <point x="223.967" y="700.0" type="line"/>
+      <point x="224.037" y="560.0" type="line"/>
+      <point x="75.0" y="410.963" type="line"/>
+      <point x="75.0" y="289.037" type="line"/>
+      <point x="154.1" y="210.014" type="line"/>
+      <point x="75.0" y="130.963" type="line"/>
+      <point x="75.0" y="9.037" type="line"/>
+      <point x="224.037" y="-140.0" type="line"/>
+      <point x="775.0" y="-140.0" type="line"/>
+      <point x="775.0" y="0.0" type="line"/>
+      <point x="281.773" y="0.0" type="line"/>
+      <point x="215.0" y="70.0" type="line"/>
+      <point x="281.773" y="140.0" type="line"/>
+      <point x="635.0" y="140.0" type="line"/>
+      <point x="635.0" y="280.0" type="line"/>
+      <point x="281.773" y="280.0" type="line"/>
+      <point x="215.0" y="350.014" type="line"/>
+      <point x="281.773" y="420.0" type="line"/>
+    </contour>
+  </outline>
+</glyph>
