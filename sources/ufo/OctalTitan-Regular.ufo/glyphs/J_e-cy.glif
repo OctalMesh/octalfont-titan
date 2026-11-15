@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Je-cy" format="2">
+  <advance width="850"/>
+  <unicode hex="0408"/>
+  <anchor x="446" y="740" name="top"/>
+  <anchor x="446" y="-40" name="bottom"/>
+  <outline>
+    <contour>
+      <point x="635.0" y="700.0" type="line"/>
+      <point x="635.0" y="206.77" type="line"/>
+      <point x="568.23" y="140.0" type="line"/>
+      <point x="281.769" y="140.0" type="line"/>
+      <point x="215.0" y="206.77" type="line"/>
+      <point x="116.137" y="107.904" type="line"/>
+      <point x="224.04" y="0.0" type="line"/>
+      <point x="625.96" y="0.0" type="line"/>
+      <point x="775.0" y="149.04" type="line"/>
+      <point x="775.0" y="700.0" type="line"/>
+    </contour>
+  </outline>
+</glyph>
