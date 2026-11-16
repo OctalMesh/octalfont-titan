@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="tilde" format="2">
+  <advance width="850"/>
+  <unicode hex="02DC"/>
+  <outline>
+    <contour>
+      <point x="775.0" y="601.005" type="line"/>
+      <point x="676.005" y="700.0" type="line"/>
+      <point x="528.508" y="552.502" type="line"/>
+      <point x="381.01" y="700.0" type="line"/>
+      <point x="272.99" y="700.0" type="line"/>
+      <point x="75.0" y="502.01" type="line"/>
+      <point x="173.995" y="403.015" type="line"/>
+      <point x="327.0" y="556.02" type="line"/>
+      <point x="480.005" y="403.015" type="line"/>
+      <point x="577.01" y="403.015" type="line"/>
+    </contour>
+  </outline>
+</glyph>
