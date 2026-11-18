@@ -1,0 +1,31 @@
+# ============================================================================ #
+#                        Dependabot Configuration File                         #
+# ============================================================================ #
+# Keeps GitHub Actions and the reusable workflow references from               #
+# OctalMesh/OctalFont up to date by opening pull requests on a weekly          #
+# schedule. The octalfont pin in requirements.txt is bumped by hand together   #
+# with the workflow reference.                                                 #
+#                                                                              #
+# See: https://dependabot.com                                                  #
+# ============================================================================ #
+
+version: 2
+
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    target-branch: "dev"
+    open-pull-requests-limit: 5
+
+    # Runs every Monday at 6:00 AM UTC
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "06:00"
+
+    labels:
+      - "Dependencies"
+
+    commit-message:
+      prefix: "chore"
+      include: "scope"

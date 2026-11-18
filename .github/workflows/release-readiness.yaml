@@ -1,0 +1,33 @@
+# ============================================================================ #
+#                          Release Readiness Workflow                          #
+# ============================================================================ #
+# Gates pull requests that target release: the version must have moved         #
+# forward and be documented in CHANGELOG.md.                                   #
+#                                                                              #
+# The logic lives in OctalMesh/OctalFont, pinned to a tag: update the          #
+# "@v0.1.0" suffix together with the octalfont pin in requirements.txt.        #
+#                                                                              #
+# See: RELEASING.md - for more details on the release process.                 #
+# ============================================================================ #
+
+name: "Releasing: Readiness"
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: ["release"]
+    types: ["opened", "synchronize", "reopened", "ready_for_review"]
+
+concurrency:
+  group: "release-readiness-${{ github.ref }}"
+  cancel-in-progress: true
+
+permissions:
+  contents: "read"
+
+jobs:
+  readiness:
+    name: "Readiness"
+    uses: OctalMesh/OctalFont/.github/workflows/reusable-release-readiness.yaml@dev
+    with:
+      kind: "font"

@@ -1,0 +1,36 @@
+# ============================================================================ #
+#                                Build Workflow                                #
+# ============================================================================ #
+# Regenerates the sources, runs the fonts checks, builds the fonts and runs    #
+# Font Bakery on every push to dev and release, and on every pull request      #
+# targeting either branch. Pull requests into dev must carry a changeset.      #
+#                                                                              #
+# The logic lives in OctalMesh/OctalFont (reusable-font-ci.yaml), pinned to a  #
+# tag: update the "@v0.1.0" suffix together with the octalfont pin in          #
+# requirements.txt.                                                            #
+#                                                                              #
+# Skip tags (anywhere in commit message or PR title):                          #
+#   [ci-skip]    - skips all workflows                                         #
+#   [build-skip] - skips this workflow only                                    #
+# ============================================================================ #
+
+name: "CI: Build"
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ["dev", "release"]
+  pull_request:
+    branches: ["dev", "release"]
+
+concurrency:
+  group: "build-${{ github.workflow }}-${{ github.ref }}"
+  cancel-in-progress: true
+
+permissions:
+  contents: "read"
+
+jobs:
+  build:
+    name: "Build"
+    uses: OctalMesh/OctalFont/.github/workflows/reusable-font-ci.yaml@dev

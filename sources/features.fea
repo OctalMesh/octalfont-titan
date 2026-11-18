@@ -1,0 +1,18 @@
+languagesystem DFLT dflt;
+languagesystem latn dflt;
+languagesystem latn CAT;
+languagesystem cyrl dflt;
+
+# Catalan punt volat (l·l). Reachable only with the CAT language tag.
+feature locl {
+    script latn;
+    language CAT;
+    sub periodcentered by periodcentered.loclCAT;
+} locl;
+
+feature case {
+    sub periodcentered.loclCAT by periodcentered.loclCAT.case;
+} case;
+
+# TODO(lowercase): Turkish/Azeri dotted i once `i` is drawn:
+#   language TRK; sub i by idotaccent;
