@@ -29,7 +29,7 @@ permissions:
 jobs:
   post-release:
     name: "Post-Release"
-    uses: OctalMesh/OctalFont/.github/workflows/reusable-release-post.yaml@v0.1.0
+    uses: OctalMesh/OctalFont/.github/workflows/reusable-release-post.yaml@dev
     with:
       kind: "font"
       title: "Octal Titan"

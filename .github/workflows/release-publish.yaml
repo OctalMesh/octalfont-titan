@@ -27,5 +27,5 @@ permissions:
 jobs:
   publish:
     name: "Publish"
-    uses: OctalMesh/OctalFont/.github/workflows/reusable-font-publish.yaml@v0.1.0
+    uses: OctalMesh/OctalFont/.github/workflows/reusable-font-publish.yaml@dev
     secrets: "inherit"

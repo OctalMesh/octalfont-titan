@@ -32,4 +32,4 @@ jobs:
   checklist:
     name: "Checklist"
     if: github.event_name != 'workflow_run' || github.event.workflow_run.head_branch == 'release-candidate'
-    uses: OctalMesh/OctalFont/.github/workflows/reusable-release-checklist.yaml@v0.1.0
+    uses: OctalMesh/OctalFont/.github/workflows/reusable-release-checklist.yaml@dev

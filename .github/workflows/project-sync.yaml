@@ -35,5 +35,5 @@ permissions:
 jobs:
   project-sync:
     name: "Project Sync"
-    uses: OctalMesh/OctalFont/.github/workflows/reusable-project-sync.yaml@v0.1.0
+    uses: OctalMesh/OctalFont/.github/workflows/reusable-project-sync.yaml@dev
     secrets: "inherit"

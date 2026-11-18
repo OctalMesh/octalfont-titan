@@ -33,4 +33,4 @@ permissions:
 jobs:
   build:
     name: "Build"
-    uses: OctalMesh/OctalFont/.github/workflows/reusable-font-ci.yaml@v0.1.0
+    uses: OctalMesh/OctalFont/.github/workflows/reusable-font-ci.yaml@dev

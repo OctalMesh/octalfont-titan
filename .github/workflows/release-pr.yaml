@@ -29,7 +29,7 @@ permissions:
 jobs:
   release-pr:
     name: "Release PR"
-    uses: OctalMesh/OctalFont/.github/workflows/reusable-release-pr.yaml@v0.1.0
+    uses: OctalMesh/OctalFont/.github/workflows/reusable-release-pr.yaml@dev
     with:
       kind: "font"
       title: "Octal Titan"

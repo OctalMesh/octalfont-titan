@@ -22,5 +22,5 @@ jobs:
   automerge:
     name: "Auto-merge"
     if: github.actor == 'dependabot[bot]'
-    uses: OctalMesh/OctalFont/.github/workflows/reusable-dependabot-automerge.yaml@v0.1.0
+    uses: OctalMesh/OctalFont/.github/workflows/reusable-dependabot-automerge.yaml@dev
     secrets: "inherit"

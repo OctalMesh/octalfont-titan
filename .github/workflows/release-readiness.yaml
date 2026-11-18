@@ -28,6 +28,6 @@ permissions:
 jobs:
   readiness:
     name: "Readiness"
-    uses: OctalMesh/OctalFont/.github/workflows/reusable-release-readiness.yaml@v0.1.0
+    uses: OctalMesh/OctalFont/.github/workflows/reusable-release-readiness.yaml@dev
     with:
       kind: "font"
