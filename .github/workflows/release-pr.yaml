@@ -1,0 +1,36 @@
+# ============================================================================ #
+#                              Release PR Workflow                             #
+# ============================================================================ #
+# Keeps a single DRAFT "release: Octal Titan vX.YYY" PR up to date against     #
+# release whenever changesets land on dev: new font version, CHANGELOG.md,     #
+# regenerated sources.                                                         #
+#                                                                              #
+# Auth: the octal-automation GitHub App (BOT_CLIENT_ID, BOT_PRIVATE_KEY).      #
+# The logic lives in OctalMesh/OctalFont, pinned to a tag: update the          #
+# "@v0.1.0" suffix together with the octalfont pin in requirements.txt.        #
+#                                                                              #
+# See: RELEASING.md - for more details on the release process.                 #
+# ============================================================================ #
+
+name: "Releasing: Release PR"
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ["dev"]
+
+concurrency:
+  group: "release-pr"
+  cancel-in-progress: false
+
+permissions:
+  contents: "read"
+
+jobs:
+  release-pr:
+    name: "Release PR"
+    uses: OctalMesh/OctalFont/.github/workflows/reusable-release-pr.yaml@v0.1.0
+    with:
+      kind: "font"
+      title: "Octal Titan"
+    secrets: "inherit"

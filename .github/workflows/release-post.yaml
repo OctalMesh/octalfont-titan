@@ -1,0 +1,36 @@
+# ============================================================================ #
+#                            Post-Release Workflow                             #
+# ============================================================================ #
+# Runs on every push to release, i.e. right after the release PR is merged:    #
+# cuts the tag, opens a DRAFT GitHub Release and merges release back into dev. #
+# Clicking "Publish" on the draft fires release-publish.yaml.                  #
+#                                                                              #
+# Auth: the octal-automation GitHub App (BOT_CLIENT_ID, BOT_PRIVATE_KEY).      #
+# The logic lives in OctalMesh/OctalFont, pinned to a tag: update the          #
+# "@v0.1.0" suffix together with the octalfont pin in requirements.txt.        #
+#                                                                              #
+# See: RELEASING.md - for more details on the release process.                 #
+# ============================================================================ #
+
+name: "Releasing: Post-Release"
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ["release"]
+
+concurrency:
+  group: "post-release"
+  cancel-in-progress: false
+
+permissions:
+  contents: "read"
+
+jobs:
+  post-release:
+    name: "Post-Release"
+    uses: OctalMesh/OctalFont/.github/workflows/reusable-release-post.yaml@v0.1.0
+    with:
+      kind: "font"
+      title: "Octal Titan"
+    secrets: "inherit"

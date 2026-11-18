@@ -1,0 +1,12 @@
+{
+  "name": "octalfont-titan",
+  "scheme": "font",
+  "versionFile": "sources/font.yaml",
+  "baseBranch": "dev",
+  "releaseBranch": "release",
+  "tagPrefix": "v",
+  "changelog": "CHANGELOG.md",
+  "paths": [
+    "sources/**"
+  ]
+}

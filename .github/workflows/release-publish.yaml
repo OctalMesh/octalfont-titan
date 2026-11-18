@@ -1,0 +1,31 @@
+# ============================================================================ #
+#                               Publish Workflow                               #
+# ============================================================================ #
+# Runs when a GitHub Release is published (the one deliberate, human click on  #
+# the draft). Rebuilds the fonts from the tag, packages them in the upstream   #
+# layout, attests the archive and attaches it to the Release. It also builds   #
+# the npm package (self-hostable WOFF2 + CSS); the repository variable         #
+# PUBLISH_NPM=true publishes it to npmjs.com.                                  #
+#                                                                              #
+# The logic lives in OctalMesh/OctalFont, pinned to a tag: update the          #
+# "@v0.1.0" suffix together with the octalfont pin in requirements.txt.        #
+#                                                                              #
+# See: RELEASING.md - for more details on the release process.                 #
+# ============================================================================ #
+
+name: "Releasing: Publish"
+
+on:
+  release:
+    types: ["published"]
+
+permissions:
+  contents: "write"
+  id-token: "write"
+  attestations: "write"
+
+jobs:
+  publish:
+    name: "Publish"
+    uses: OctalMesh/OctalFont/.github/workflows/reusable-font-publish.yaml@v0.1.0
+    secrets: "inherit"
