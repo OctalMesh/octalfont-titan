@@ -1,7 +1,7 @@
 # Single source of truth for Octal Titan. Everything else in sources/ is generated:
 #   octalfont sources   ->  ufo/, OctalTitan.designspace, config.yaml
 family: Octal Titan
-version: "0.000"
+version: "1.000"
 copyright_year: 2025
 repository: https://github.com/OctalMesh/octalfont-titan
 vendor_id: OCTM
